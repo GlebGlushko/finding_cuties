@@ -32,11 +32,13 @@ class Model:
         output = preprocess_input(img_array)
         return output
 
+
+
 if __name__=='__main__':
   model = Model()
-  image_path = Path(os.getcwd()+'/src/input/1.png')
+  image_path = Path(os.getcwd()+'/src/input/3.png')
   predictions = model.predict(image_path)
   print(predictions)
   # classes = pd.read_json(Path(os.getcwd()+'/src/input/imagenet_class_index.json'))
   # classes = classes.transpose()
-  # print(classes)
+  # print(classes.head(15))
