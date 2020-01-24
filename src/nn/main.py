@@ -1,9 +1,11 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow.python import  keras
-from keras.applications.resnet50 import preprocess_input, decode_predictions
+# from keras.applications.resnet50 import preprocess_input, decode_predictions
+from keras.applications.vgg16 import preprocess_input, decode_predictions
 from keras.preprocessing.image import load_img, img_to_array
 from keras.applications import ResNet50
+from keras.applications import VGG16
 from pathlib import Path
 import os 
 import pandas as pd
@@ -13,7 +15,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 
 class Model:
     image_size=224
-    model = ResNet50()
+    model = VGG16()
 
     def __init__(self):
         pass
